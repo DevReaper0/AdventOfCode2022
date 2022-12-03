@@ -3,9 +3,7 @@ use std::fs;
 fn main() {
     let file_path = "input.txt";
 
-    let contents = fs::read_to_string(file_path)
-        .expect("Should have been able to read the file");
-
+    let contents = fs::read_to_string(file_path).expect("Should have been able to read the file");
 
     let mut elves: Vec<i32> = Vec::new();
     for line in contents.lines() {
@@ -17,8 +15,7 @@ fn main() {
             if let Some(elem) = elves.get_mut(i) {
                 *elem += line.parse::<i32>().unwrap();
             }
-        }
-        else {
+        } else {
             elves.push(0);
         }
     }
@@ -28,4 +25,3 @@ fn main() {
     println!("Part One: {}", elves[0]);
     println!("Part Two: {}", (elves[0] + elves[1] + elves[2]));
 }
-

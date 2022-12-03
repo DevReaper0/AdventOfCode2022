@@ -56,9 +56,7 @@ Find the item type that corresponds to the badges of each three-Elf group. What 
 fn main() {
     let file_path = "input.txt";
 
-    let contents = fs::read_to_string(file_path)
-        .expect("Should have been able to read the file");
-
+    let contents = fs::read_to_string(file_path).expect("Should have been able to read the file");
 
     let mut part_one = 0;
     for line in contents.lines() {
@@ -98,4 +96,3 @@ fn main() {
     println!("Part One: {}", part_one);
     println!("Part Two: {}", part_two);
 }
-
